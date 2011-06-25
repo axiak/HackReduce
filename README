@@ -26,7 +26,7 @@ Google Books Data
   Reducer Output: {symbol}_{year}\t{ave_close_price}\t{count}
 
 2.  Get yearly company mentions
-  Data sets:  Google Book Data, Map of symbols 
+  Data sets:  Google Book Data
   Mapper Output:  {company_name}_{year}\t{count}
 
 3.  Translate company names to symbols
