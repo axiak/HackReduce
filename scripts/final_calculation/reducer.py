@@ -23,9 +23,7 @@ def main(argv):
 
       stock_variance = (float(value) - float(average)) / float(total)
       book_variance = (float(book['value']) - float(book['average'])) / float(book['total'])
-
-      print "book var is ", book_variance, " and stock var is ", stock_variance
-
+      
       standard_scores[symbol] += stock_variance * book_variance
       year_counts[symbol] += 1
 
