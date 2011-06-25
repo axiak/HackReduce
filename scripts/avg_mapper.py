@@ -1,4 +1,4 @@
-$
+#!/usr/bin/python
 #Get the ticker_year and closingprice
 import sys
 #Sample Data:
@@ -15,9 +15,11 @@ def main():
     for line in sys.stdin:
         # remove leading and trailing whitespace
     	line = line.strip()
-    	words = line.split()
+    	words = line.split(',')
     	#Get ticker, date and closing price
-    	if words[0] != 'exchange'
+        if not line:
+            continue
+    	if words[0] != 'exchange':
 			ticker=words[1].lower()
 			date= words[2].split('-')
 			year=date[0]
