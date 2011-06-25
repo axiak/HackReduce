@@ -25,17 +25,24 @@ Google Books Data
   Mapper Output: {symbol}_{year}\t{close_price}
   Reducer Output: {symbol}_{year}\t{ave_close_price}\t{count}
 
-2.  Get yearly company mentions
-  Data sets:  Google Book Data, Mikes map of company names
-  Mapper Output:  {symbol}_{year}\t{count}
- 
-3.  Find total stock price and average for all stocks and years (for use in correlation calculation)
+2.  Find total stock price and average for all stocks and years (for use in correlation calculation)
   Data set:  Output from #1
-  Mapper:  {symbol}_{year}\t{ave_close_price}\t{sum_across_all_years}\t{average_across_all_years}
+  Mapper:  {symbol}_{year}_stock\t{ave_close_price}\t{sum_across_all_years}\t{average_across_all_years}
   no reducer
 
     cat data_file_name.txt | python script_name.py > results.txt
 
+
+2.  Get yearly company mentions in Google Book Data
+  Data sets:  Google Book Data, Mikes map of company names
+  Mapper Output:  {symbol}_{year}\t{count}
+  Reducer Output:  {symbol}_{year}_book\t{count}\t{total_count_across_all_years}\t{average_across_year}
+
+
+ 
+4.  Calculate the 
+
+    
 
 Example of python script for a mapper can be found here:
 
