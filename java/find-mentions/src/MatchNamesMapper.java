@@ -14,7 +14,12 @@ public class MatchNamesMapper extends Mapper<LongWritable, Text, Text, Text> {
 		String[] columns = value.toString().split("\t");
 		
 		int ngramLength = columns.length - 4;
-				
+
+		if (ngramLength < 1) { 
+			// if this happened, parsing is broken so just skip this record
+			return;
+		}
+
 		StringBuilder ngram = new StringBuilder();
 		for (int i=0; i < ngramLength; i++) { 
 			ngram.append(columns[i].toLowerCase());
@@ -23,18 +28,12 @@ public class MatchNamesMapper extends Mapper<LongWritable, Text, Text, Text> {
 			}
 		}
 		
-		// skip if parsing didn't work -- this happened at least once
-		// TODO add a counter to count problem lines 
-		if (ngramLength < 1) { 
-			return;
-		}
-		
 		String year = columns[ngramLength];
 		String match = columns[ngramLength + 1];
 		String page = columns[ngramLength + 2];
 		String volume = columns[ngramLength + 3];
 		
-		String symbol = COMPANY_NAMES.get(ngram);
+		String symbol = COMPANY_NAMES.get(ngram.toString());
 		if (symbol != null) { 
 			context.write(new Text(symbol + "_" + year), new Text(volume));
 		}
