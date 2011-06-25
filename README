@@ -38,7 +38,7 @@ Google Books Data
   Reducer Output:  {symbol}_{year}_book\t{count}\t{total_count_across_all_years}\t{average_across_all_years}
 
 4.  Final Calculation
-
+  
     
 
 Example of python script for a mapper can be found here:
@@ -47,3 +47,6 @@ http://docs.amazonwebservices.com/ElasticMapReduce/latest/GettingStartedGuide/
 
 Python idioms:
 http://jaynes.colorado.edu/PythonIdioms.html
+
+
+
