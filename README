@@ -26,14 +26,10 @@ Google Books Data
   Reducer Output: {symbol}_{year}\t{ave_close_price}\t{count}
 
 2.  Get yearly company mentions
-  Data sets:  Google Book Data
-  Mapper Output:  {company_name}_{year}\t{count}
-
-3.  Translate company names to symbols
-  Data set:  Mike's mapping from company name to symbol and the data set from above
-  Output (no map reduce):  {symbol}_{year}\t{count}
-  
-4.  Find total stock price and average for all stocks and years (for use in correlation calculation)
+  Data sets:  Google Book Data, Mikes map of company names
+  Mapper Output:  {symbol}_{year}\t{count}
+ 
+3.  Find total stock price and average for all stocks and years (for use in correlation calculation)
   Data set:  Output from #1
   Mapper:  {symbol}_{year}\t{ave_close_price}\t{sum_across_all_years}\t{average_across_all_years}
   no reducer
