@@ -22,7 +22,6 @@ def main():
 		line = line.strip()
 	
 		# parse the input we got from mapper.py
-                print line.split('\t', 2)
 		symbol_year, closeprice, cnt = line.split('\t', 2)
 		try:
 			closeprice = float(closeprice)
@@ -37,7 +36,7 @@ def main():
 		symbol_data[symbol_year] = (sum_price, avg, count)
 	
 	for key, value in symbol_data.iteritems():
-		print '%s\t%s\t%s\t%s' % (key, value[0], value[1], value[2] )
+		print '%s_symbol\t%s\t%s\t%s' % (key, closeprice, value[0], value[1])
 		
 if __name__ == '__main__':
     main()
