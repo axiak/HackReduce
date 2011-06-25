@@ -1,5 +1,6 @@
 #!/usr/bin/python
     
+from collections import defaultdict
 import sys
     
 def main(argv):
@@ -17,7 +18,7 @@ def main(argv):
     elif (which == 'symbol' and 
           book is not None and 
           book['total'] > 0 and 
-          book['symbol'] == symbol
+          book['symbol'] == symbol and
           book['year'] == year):
 
       stock_variance = (value - average) / total
@@ -32,12 +33,10 @@ def main(argv):
 
     line =  sys.stdin.readline()
 
-  except "end of file":
-    return None
 
   for symbol in standard_scores:
     print symbol, ': ', str(standard_scores[symbol] / (year_counts[symbol] - 1))
 
 
 if __name__ == "__main__":
-main(sys.argv)   
+  main(sys.argv)   
