@@ -1,6 +1,6 @@
     final static Map<String, String> COMPANY_NAMES = new HashMap<String, String>();
     {
-        COMPANY_NAMES.put("news", "nws");
+        COMPANY_NAMES.put("news corp", "nws");
         COMPANY_NAMES.put("new york company", "nwy");
         COMPANY_NAMES.put("northwestern", "nwe");
         COMPANY_NAMES.put("newell rubbermaid", "nwl");
@@ -250,7 +250,7 @@
         COMPANY_NAMES.put("dollar general", "dg");
         COMPANY_NAMES.put("dupont de nemours", "dd");
         COMPANY_NAMES.put("deere", "de");
-        COMPANY_NAMES.put("deutsche bank ag\", "db");
+        COMPANY_NAMES.put("deutsche bank ag", "db");
         COMPANY_NAMES.put("dynex capital", "dx");
         COMPANY_NAMES.put("dycom industries", "dy");
         COMPANY_NAMES.put("devry", "dv");
@@ -1726,7 +1726,7 @@
         COMPANY_NAMES.put("american eagle outfitters", "aeo");
         COMPANY_NAMES.put("sunstone hotel investors", "sho");
         COMPANY_NAMES.put("peabody energy", "btu");
-        COMPANY_NAMES.put("willbros group, inc.w\", "wg");
+        COMPANY_NAMES.put("willbros group, inc.w", "wg");
         COMPANY_NAMES.put("ennis", "ebf");
         COMPANY_NAMES.put("baytex energy", "bte");
         COMPANY_NAMES.put("brazilian electric power", "ebr");
@@ -1890,7 +1890,7 @@
         COMPANY_NAMES.put("essex property trust", "ess");
         COMPANY_NAMES.put("telefonos de mexico de", "tmx");
         COMPANY_NAMES.put("esco technologies", "ese");
-        COMPANY_NAMES.put("emeritus corp\", "esc");
+        COMPANY_NAMES.put("emeritus corp", "esc");
         COMPANY_NAMES.put("team health holdings", "tmh");
         COMPANY_NAMES.put("esterline technologies", "esl");
         COMPANY_NAMES.put("grupo tmm sab", "tmm");
