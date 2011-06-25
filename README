@@ -9,3 +9,18 @@ http://ngrams.googlelabs.com/datasets
 format of stock data
 ---------------------
 
+
+
+First Round
+-----------
+We are going to find correlations between frequency of company name mentions and their performance of the companies on the stock exchange.
+
+Data Sets:
+NYSE data (link)
+Google Books Data
+
+
+1.  Find yearly average stock prices
+  Data set: NYSE
+  Mapper Output: {symbol}_{year}\t{close_price}
+  Reducer Output: {symbol}_{year}\t{ave}\t{count}
