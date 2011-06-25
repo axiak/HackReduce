@@ -5,16 +5,38 @@ import sys
 def main(argv):
   line = sys.stdin.readline()
 
-  # {symbol}_{year}_stock\t{ave_close_price}\t{sum_across_all_years}\t{average_across_all_years}
-  # {symbol}_{year}_book\t{count}\t{total_count_across_all_years}\t{average_across_all_years}
-
-  
+  book = None
+  standard_scores, year_counts = defaultdict(int), defaultdict(int)
   while line:
-      print  "LongValueSum:" + word.lower() + "\t" + "1"
-      line =  sys.stdin.readline()
+    key, value, total, average = line.rstrip().split("\t")
+    symbol, year, which = key.split("_") 
+
+    if which == 'book':
+      book = dict(value=value, total=total, average=average, symbol=symbol)
+
+    elif (which == 'symbol' and 
+          book is not None and 
+          book['total'] > 0 and 
+          book['symbol'] == symbol
+          book['year'] == year):
+
+      stock_variance = (value - average) / total
+      book_variance = (book['value'] - book['average']) / book['total']
+
+      standard_scores[symbol] += stock_variance * book_variance
+      year_counts[symbol] += 1
+
+      book = None
+    else:
+      book = None
+
+    line =  sys.stdin.readline()
+
   except "end of file":
     return None
 
+  for symbol in standard_scores:
+    print symbol, ': ', str(standard_scores[symbol] / (year_counts[symbol] - 1))
 
 
 if __name__ == "__main__":
