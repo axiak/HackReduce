@@ -11,12 +11,12 @@ def get_company_name(symbol):
     content = urllib.urlopen(url).read()
     m = company_name_re.search(content)
     if m:
-        return m.group(1).trim()
+        return m.group(1).strip()
     else:
         return None
 
 def main():
-    for line in sys.stdin():
+    for line in sys.stdin:
         ticker = line.strip().split()[0]
         if ticker:
             print "%s\t%s" % (ticker, get_company_name(ticker))
