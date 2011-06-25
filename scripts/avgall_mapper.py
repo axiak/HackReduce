@@ -36,7 +36,7 @@ def main():
 		symbol_data[symbol_year] = (sum_price, avg, count)
 	
 	for key, value in symbol_data.iteritems():
-		print '%s\t%s\t%s\t%s' % (key, closeprice value[0], value[1])
+		print '%s\t%s\t%s\t%s' % (key, closeprice, value[0], value[1])
 		
 if __name__ == '__main__':
     main()
