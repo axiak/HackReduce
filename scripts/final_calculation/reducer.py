@@ -13,7 +13,7 @@ def main(argv):
     symbol, year, which = key.split("_") 
 
     if which == 'book':
-      book = dict(value=value, total=total, average=average, symbol=symbol)
+      book = dict(value=value, year=year, total=total, average=average, symbol=symbol)
 
     elif (which == 'symbol' and 
           book is not None and 
