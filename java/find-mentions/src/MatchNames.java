@@ -10,9 +10,9 @@ import org.apache.hadoop.util.Tool;
 import org.apache.hadoop.util.ToolRunner;
 
 
-public class MatchNames extends Configured implements Tool {
 
-	public static final String INPUT_PATH = "/datasets/ngrams/";
+public class MatchNames extends Configured implements Tool {
+  public static final String INPUT_PATH = "/datasets/ngrams/";
 	public static final String OUTPUT_PATH = "/mnt/team6/bpopp/out";
 	
 	@Override
