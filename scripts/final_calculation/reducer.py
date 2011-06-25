@@ -21,8 +21,8 @@ def main(argv):
           book['symbol'] == symbol and
           book['year'] == year):
 
-      stock_variance = (value - average) / total
-      book_variance = (book['value'] - book['average']) / book['total']
+      stock_variance = (float(value) - float(average)) / float(total)
+      book_variance = (float(book['value']) - float(book['average'])) / float(book['total'])
 
       standard_scores[symbol] += stock_variance * book_variance
       year_counts[symbol] += 1
