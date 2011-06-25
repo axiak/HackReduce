@@ -10,7 +10,7 @@ map = {}
 
 for line in sys.stdin:
 	symbol, name = line.lower().strip().split('\t', 1)
-	tokens = bad_re2.sub('', bad_re.sub('', line.replace('&amp;', '&').replace('&#39;', "'").lower())).split()
+	tokens = bad_re2.sub('', bad_re.sub('', name.replace('&amp;', '&').replace('&#39;', "'").lower())).split()
 	for bad_token in 'co inc corp /de /de/ /fi /fi/ /inc/de/ inc/de lp ltd ltd/cn group'.split():
 		try:
 			tokens.remove(bad_token)
