@@ -32,15 +32,12 @@ Google Books Data
 
     cat data_file_name.txt | python script_name.py > results.txt
 
-
-2.  Get yearly company mentions in Google Book Data
+3.  Get yearly company mentions in Google Book Data
   Data sets:  Google Book Data, Mikes map of company names
   Mapper Output:  {symbol}_{year}\t{count}
   Reducer Output:  {symbol}_{year}_book\t{count}\t{total_count_across_all_years}\t{average_across_year}
 
-
- 
-4.  Calculate the 
+4.  Final Calculation
 
     
 
