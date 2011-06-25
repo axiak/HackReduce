@@ -38,4 +38,5 @@ Google Books Data
   Mapper:  {symbol}_{year}\t{ave_close_price}\t{sum_across_all_years}\t{average_across_all_years}
   no reducer
 
-  
+    cat data_file_name.txt | python script_name.py > results.txt
+    
