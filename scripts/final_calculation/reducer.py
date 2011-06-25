@@ -35,7 +35,8 @@ def main(argv):
 
 
   for symbol in standard_scores:
-    print symbol, ': ', str(standard_scores[symbol] / (year_counts[symbol] - 1))
+    if year_counts[symbol] > 1:
+      print symbol, ': ', str(standard_scores[symbol] / (year_counts[symbol] - 1))
 
 
 if __name__ == "__main__":
