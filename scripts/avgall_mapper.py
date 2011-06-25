@@ -22,7 +22,6 @@ def main():
 		line = line.strip()
 	
 		# parse the input we got from mapper.py
-                print line.split('\t', 2)
 		symbol_year, closeprice, cnt = line.split('\t', 2)
 		try:
 			closeprice = float(closeprice)
