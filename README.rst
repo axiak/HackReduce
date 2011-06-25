@@ -39,4 +39,8 @@ Google Books Data
   no reducer
 
     cat data_file_name.txt | python script_name.py > results.txt
-    
+
+
+Example of python script for a mapper can be found here:
+
+http://docs.amazonwebservices.com/ElasticMapReduce/latest/GettingStartedGuide/
